@@ -1,0 +1,15 @@
+li{
+    color: blue;
+}
+
+ul>li{
+    color: red;
+}
+
+ul>ul{
+    color: black;        /* for this ul must be direict child of ul and no elemnets must be there in between*/
+}
+
+ul ul{
+   color: black;       /* this means ul is descendent of ul */
+}

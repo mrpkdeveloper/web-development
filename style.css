@@ -1,0 +1,53 @@
+*{
+    background-color:  white;
+
+}     /*  this block is apllied on whole web page */
+
+div{
+    color: black;
+}
+
+h4{
+    margin-left: 30px;
+}
+
+p{
+    font-size: 30px;
+}
+
+#p2{
+
+    color: blue;
+    font-size: 10vh;
+}                        /* well # is used for id */
+
+
+#p1{
+    background-color: white;
+}
+.one{
+    background-color: lightpink;         /* well . is used for classes */
+}
+
+.two{
+    font-size: 50px;
+}
+
+.box{
+    margin  :50px;
+    padding: 50px;
+    border: solid black;
+}
+
+#div1{
+  background-color: yellow;
+  
+}
+
+#div2{
+    background-color: green;
+   }
+
+   #div3{
+    background-color: lightpink;
+   }
