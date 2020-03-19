@@ -1,0 +1,17 @@
+*{
+    font-size: 30px;
+}
+
+
+ol ol{
+    display: none;
+    color: red;
+}
+ol ol ol{
+    display: none;
+    color:green;
+}
+li:hover >ol{
+     display: block;
+}
+

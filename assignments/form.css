@@ -1,0 +1,18 @@
+div{
+    margin: 50px;
+    font-size: 20px;
+    line-height: 40px;
+}
+button{
+    margin-left: 50vw;
+    font-size: 30px;
+}
+input{
+    margin-left: 10px;
+}
+
+h1{
+ margin-top: 30px;
+ position: sticky;
+ top: 20px;
+}

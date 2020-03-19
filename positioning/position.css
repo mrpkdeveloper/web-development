@@ -1,0 +1,30 @@
+div{
+    margin: 100px;
+}
+
+#div1{
+    background-color: yellow;
+    width: 70px;
+    height: 70px;
+    transform: scale(2);
+   /* position:fixed;  */  /* pos is fixed on scrolling*/
+   /* position: sticky; */      /* pos sticks on top on scrolling*/
+    top: 20px;
+
+}
+#div2{
+    background-color:red;
+    width: 70px;
+    height: 70px;
+}
+
+#div1:hover{
+    background-color: blue;
+    height: 20px;
+    transition: background 4s,height 2s;
+}
+
+div:hover + div{
+margin-left: 300px;
+transition: 2s;
+}
