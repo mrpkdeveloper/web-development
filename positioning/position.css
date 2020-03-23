@@ -1,12 +1,8 @@
-div{
-    margin: 100px;
-}
-
 #div1{
+    position: absolute;
     background-color: yellow;
     width: 70px;
     height: 70px;
-    transform: scale(2);
    /* position:fixed;  */  /* pos is fixed on scrolling*/
    /* position: sticky; */      /* pos sticks on top on scrolling*/
     top: 20px;
