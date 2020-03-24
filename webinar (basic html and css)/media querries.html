@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media queries</title>
+    <style>
+        .container {
+            border: solid red 1px;
+
+
+        }
+
+        .item {
+            text-align: center;
+            font-size: 50px;
+            display: none;
+        }
+
+
+
+
+
+        @media only screen and (max-width: 500px) {
+            #item-1 {
+                display: block;
+                background-color: yellowgreen;
+            }
+        }
+
+        @media only screen and (max-width: 800px) and (min-width: 501px) {
+            #item-2 {
+                display: block;
+                background-color: pink;
+            }
+        }
+
+        @media only screen and (max-width: 1200px) and (min-width: 801px) {
+            #item-3 {
+                display: block;
+                background-color: lightblue;
+            }
+        }
+
+        @media only screen and (min-width: 1201px) {
+            #item-4only screen and  {
+                display: block;
+                background-color: cyan;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="item" id="item-1">i am phone</div>
+        <div class="item" id="item-2">i am tablet</div>
+        <div class="item" id="item-3">i am laptop</div>
+        <div class="item" id="item-4">i am desktop</div>
+
+    </div>
+</body>
+
+</html>
