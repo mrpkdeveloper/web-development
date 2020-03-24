@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        .container {
+            border: solid red 1px;
+            display: flex;
+            /* above statement intialises container as flex box   */
+            height: 500px;
+            /* flex-direction: column; */
+            /* above statement show flex boxes as column  */
+            flex-wrap: wrap;
+            /* above statement wraps the flexboxes  */
+            justify-content: center;
+            /* above statement align the  flexboxes to center  */
+            justify-content: space-evenly;
+            /* align-items: center; */
+            /* above statement align flexboxes to center vertically */
+
+        }
+        .item{
+            border: solid green 1px;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+        
+        }
+
+        #item-1{
+            background-color: orange;
+            flex-shrink: 2;
+        }
+
+        #item-2{
+            background-color: yellowgreen;
+            flex-grow: 3;
+            flex-basis: 300px;
+        }
+        #item-3{
+            background-color: tomato;
+            flex-grow: 3;
+        }
+        #item-4{
+            background-color: pink;
+            flex-shrink: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>flexbox</h1>
+    <div class="container">
+
+        <div class="item" id="item-1">first box</div>
+        <div class="item" id="item-2">second box</div>
+        <div class="item" id="item-3">third box</div>
+        <div class="item" id="item-4">fourth box</div>
+
+    </div>
+
+</body>
+
+</html>

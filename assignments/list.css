@@ -5,6 +5,7 @@
 
 ol ol{
     display: none;
+    /* visibility: hidden; */
     color: red;
 }
 ol ol ol{
