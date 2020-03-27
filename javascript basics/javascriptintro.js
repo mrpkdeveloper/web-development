@@ -11,3 +11,4 @@ const b=20;
 // const for constant value 
 console.log(Number.MAX_SAFE_INTEGER);  
 // print maximum largest number allowed in js 
+console.log(typeof null)
