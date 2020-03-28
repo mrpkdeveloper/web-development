@@ -16,4 +16,6 @@ console.log('11'-1)
 //prints 10 string is typecast to number
 console.log([]==""); 
 console.log([]==0);
+// this means that empty array can typecast to 0 as well as an empty string 
+
 

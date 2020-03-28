@@ -12,3 +12,4 @@ const b=20;
 console.log(Number.MAX_SAFE_INTEGER);  
 // print maximum largest number allowed in js 
 console.log(typeof null)
+// output is object 
