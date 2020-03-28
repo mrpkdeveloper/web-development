@@ -3,4 +3,4 @@ let arr1=arr.map(function(item){
 return 100-item;
 }
 )
-console.log(arr1);
+console.log(arr1); 
