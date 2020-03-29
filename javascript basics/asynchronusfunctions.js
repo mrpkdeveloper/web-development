@@ -61,11 +61,6 @@ function resizefile(filepath, resied) {
         resied(newpath)
     }, 3000);
 
-
-
-
-
-
 }
 
 
