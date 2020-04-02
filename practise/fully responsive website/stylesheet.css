@@ -1,0 +1,164 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+#navbar::before{
+    content: "";
+    position: absolute;
+    background-color:black;
+    opacity: 0.4;
+    height: 100%;
+    width: 100%;
+    z-index: -0.9;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+.navigation{
+    display: flex;
+    font-family: 'Bree Serif', serif;
+}
+.navigation li{
+    list-style: none;
+    margin: 16px 23px;
+    z-index: 1;
+    
+}
+.navigation li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    padding : 7px;
+}
+.navigation li a:hover{
+    color: black;
+    background-color:white;
+    border-radius: 10px;
+    
+}
+
+/* section  */
+#home::before{
+    content: "";
+    position: absolute;
+    top:0px;
+    background:url('bg1.jpg') no-repeat center center/cover;
+    opacity: 0.8.9;
+    z-index: -1;
+    height: 350px;
+    width: 100%;
+}
+#home{
+    color: white;
+    margin: 20px 10px;
+    padding: 3px 200px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
+
+}
+#home p{
+    margin :20px 20px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+/* utility css */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.button{
+    margin: 10px 10px;
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    background-color:brown;
+    border:solid 2px white;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* section services  */
+#services{
+    /* border: solid 1px black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 20px;
+    height : 400px;
+}
+
+#services .box{
+    display: flex;
+    flex-direction: column;
+    border: solid 1px red;
+    margin: 10px 55px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color:#f5f0e8;
+    height: 350;
+    border-radius: 26px;
+}
+#Our-services h1{
+    margin-top: 26px;
+}
+
+.image-services{
+    width: 120px;
+    height: 83px;
+    margin: 10px;
+}
+
+#services p{
+    text-align: center;
+}
+
+
+/* clients  */
+
+#clients{
+    /* border: solid black 2px;  */
+    height: 352px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#clients::before{
+    content: "";
+    position: absolute;
+    background: url(bg.jpg);
+    opacity: 0.4;
+    z-index: -1;
+    height: 350px;
+    width: 100%;
+}
+#clients img{
+    height: 150px;
+    width: 150px;
+    padding: 50px;
+}
+
+#footer{
+    background-color: black;
+    color: white;
+    height: 30px;
+
+}
+#footer p{
+    text-align: center;
+    font-size: 30px;
+}

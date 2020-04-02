@@ -1,0 +1,93 @@
+
+*{
+}
+#navbar::before{
+    width: 1000px;
+}
+#navbar{
+
+    width: 1000px;
+    align-items: center;
+    align-content: center;
+
+}
+
+.navigation{
+
+}
+.navigation li{
+margin: 13px 2px;
+font-size: 20px;
+    
+}
+.navigation li a {
+  
+}
+.navigation li a:hover{
+
+    
+}
+
+/* section  */
+#home::before{
+
+    width: 1000px;
+}
+#home{
+
+
+}
+#home p{
+}
+/* utility css */
+.h-primary{
+    font-size: 1.8rem;
+}
+
+.button{
+ 
+}
+
+
+/* section services  */
+#services{
+
+}
+
+#services .box{
+
+}
+#Our-services h1{
+    
+}
+
+.image-services{
+
+}
+
+#services p{
+    
+}
+
+
+/* clients  */
+
+#clients{
+    /* border: solid black 2px;  */
+
+    
+}
+#clients::before{
+ 
+}
+#clients img{
+   
+}
+
+#footer{
+  
+
+}
+#footer p{
+ 
+}
