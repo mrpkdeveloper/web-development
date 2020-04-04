@@ -2,13 +2,14 @@
 *{
 }
 #navbar::before{
-    width: 1000px;
+    /* width: 1000px;  */
 }
 #navbar{
 
-    width: 1000px;
+    /* width: 1000px;  */
     align-items: center;
     align-content: center;
+ 
 
 }
 
@@ -17,11 +18,12 @@
 }
 .navigation li{
 margin: 13px 2px;
-font-size: 20px;
+
     
 }
 .navigation li a {
-  
+    font-size: 18px;
+    padding: 5px 10px;  
 }
 .navigation li a:hover{
 
@@ -31,11 +33,13 @@ font-size: 20px;
 /* section  */
 #home::before{
 
-    width: 1000px;
+    /* width: 1000px;  */
+    height: 320px;
 }
 #home{
-width: 733px;
-padding: 3px 150px;
+/* width: 733px;  */
+height: 226px;
+padding: 2px 4px;
 
 }
 #home p{
@@ -52,9 +56,9 @@ padding: 3px 150px;
 
 /* section services  */
 #services{
-width: 1000px;
+/* width: 1000px;    */
 flex-direction: column;
-height: 710px;
+height: 1300px;
 }
 
 #services .box{
@@ -62,11 +66,11 @@ height: 710px;
 }
 
 #Our-services{
-    height :730px;
-    width: 1000px;
+    height :1357px;
+    /* width: 1000px;  */
 }
 #Our-services h1{
-    margin-top: 75px;
+    margin-top: 1px;
 }
 
 .image-services{
@@ -81,7 +85,8 @@ height: 710px;
 /* clients  */
 
 #Our-Clients{
-width: 1000px;
+/* width: 1000px;  */
+height: 390px;
 }
 
 #Our-Clients h1{
@@ -89,21 +94,26 @@ width: 1000px;
     }
 #clients{
     /* border: solid black 2px;  */
-    width: 1000px;
+    /* width: 1000px;  */
+    height: 359px;
+    flex-wrap: wrap;
 
     
 }
 #clients::before{
-    width: 1000px;
+    /* width: 1000px;   */
 }
 #clients img{
-   
+    height: 89px;
+    width: 79px;
+    padding: 18px;
 }
 
 #footer{
-width: 1000px;  
+/* width: 1000px;    */
+height: 29px;
 
 }
 #footer p{
- 
+ font-size: 15px;
 }
