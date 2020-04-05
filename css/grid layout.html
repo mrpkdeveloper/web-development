@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-Layout</title>
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-areas: 
+            "navbar navbar navbar navbar"
+            "section section section aside"
+            "footer footer footer footer"
+            ;
+        }
+
+        .item {
+            background-color: lightyellow;
+            border: solid 1px black;
+        }
+
+        #navbar {
+            grid-area: navbar;
+        }
+
+        #section {
+            grid-area: section;
+        }
+
+        #aside {
+            grid-area: aside;
+        }
+
+        #footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item" id="navbar">this is a navbar</div>
+        <div class="item" id="section">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore officia saepe
+            ullam in culpa delectus molestiae eos dignissimos expedita tenetur.</div>
+        <div class="item" id="aside">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti id veritatis
+            facilis repellat corporis aliquid reprehenderit possimus optio quis excepturi numquam tempore facere ipsum
+            earum, quam deserunt delectus eaque natus dolor velit hic libero. Ratione, tempore incidunt. Maxime harum
+            blanditiis cum cumque quos minima debitis soluta, vitae voluptatibus et similique.</div>
+        <div class="item" id="footer">this is a footer</div>
+    </div>
+</body>
+
+</html>
