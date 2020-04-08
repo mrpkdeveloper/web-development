@@ -15,11 +15,14 @@ let m3=function(res,req,next){
 }
 
 server.use(m1)
-server.use(m2)
+
 server.get('/',function(req,res,next){
     res.send("hello world")
 })
-
+server.get('/a',function(req,res,next){
+    res.send("hello world a")
+})
+server.use(m2)
 server.use(m3)
 
 server.listen(3232)
