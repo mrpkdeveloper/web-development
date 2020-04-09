@@ -21,7 +21,7 @@ route.get('/add', function (req, res, next) {
     )
     res.send(teachers)
 })
-
+//params basically fetch data from client side
 route.get('/:id', function (req, res, next) {
     res.send(teachers[req.params.id])
 })
