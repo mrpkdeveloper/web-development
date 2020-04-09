@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color: brown;
+            color: white;
+            padding: 10px 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2>this is a para</h2>
+    <p id="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, molestias mollitia explicabo error, iure eum perspiciatis ducimus dignissimos commodi cumque ipsum facere animi accusamus magnam corporis aliquam maxime velit hic? Odit nihil tempora illum eveniet dolore asperiores voluptatum officia facere quasi iste, pariatur officiis distinctio perferendis consequuntur porro voluptate dignissimos tempore non sunt nobis expedita? Minus excepturi consectetur minima quam magni eaque quidem repudiandae, culpa dolore cupiditate qui. Ratione ipsum consectetur incidunt nisi, est ex magni suscipit tempore praesentium iste quidem voluptates voluptatibus mollitia eaque deserunt beatae repellat placeat cupiditate? Quis debitis, sequi deserunt laborum fugit cumque, tempore laudantium quos recusandae vel dolorum voluptates facere explicabo! Iure esse voluptas atque beatae! Beatae dolorem ad fuga vitae totam rerum tenetur perspiciatis quibusdam quod sint eligendi unde quos soluta, magni quae quis enim animi ut, provident praesentium ea explicabo atque! Hic id saepe quaerat distinctio impedit et debitis voluptate, unde animi aliquid.</p>
+    <button id="btn" onclick="togglehide()">hide</button>
+</body>
+<script>
+
+function togglehide(){
+//document object model
+
+    let para = document.getElementById("para")
+    let btn = document.getElementById("btn")
+    if(para.style.display!="none"){
+        para.style.display="none"
+        btn.textContent="show"
+    }else{
+        para.style.display="block"
+        btn.textContent="hide"
+    }
+
+}    
+</script>
+</html>
