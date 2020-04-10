@@ -10,6 +10,17 @@ route.get('/',function(req,res,next){
     res.send(students)
 })
 
+route.post('/',(req,res)=>{
+     students.push(
+         {
+             name:req.body.name,
+             college:req.body.college,
+             year:req.body.year
+         }
+     )
+     res.send(students)
+})
+
 route.get('/:id',function(req,res,next){
     res.send(students[req.params.id])
 })

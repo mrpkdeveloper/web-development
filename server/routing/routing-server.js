@@ -1,4 +1,8 @@
-const srv  = require('express')()
+const express=require('express')
+const srv  = express()
+
+srv.use(express.json())
+srv.use(express.urlencoded({extended:true}))
 
 const teacher_route=require('./routes/teacher')
 const student_route=require('./routes/student')
