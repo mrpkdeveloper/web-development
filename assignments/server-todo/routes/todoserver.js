@@ -4,7 +4,7 @@ const srv = express()
 srv.use(express.json())
 srv.use(express.urlencoded({extended:true}))
 
-const list_srv=require('./public/list')
+const list_srv=require('./list')
 
 srv.use('/todos',list_srv)
 srv.use(function(req,res,next){
