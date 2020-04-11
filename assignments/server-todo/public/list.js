@@ -33,6 +33,6 @@ route.delete('/:id',(req,res)=>{
 })
 
 route.patch('/:id',(req,res)=>{
-    list[req.params.id]={tsak:req.body.task,status:req.body.status}
+    list[req.params.id]={task:req.body.task,status:req.body.status}
     res.send(list)
 })
