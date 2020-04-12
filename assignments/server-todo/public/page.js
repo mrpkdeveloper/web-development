@@ -7,16 +7,16 @@ $(function () {
             // console.log('button was clicked')
             let newtasklist = newtask.val()  //function of jquerry
 
-            // $.post(
+            $.post(
                 '/list/',
                 { task: newtasklist , status: "" }, 
-                // function (data) {
+                function (data) {
                     todoList.empty()
                     for (todo of data) {
                         todoList.append("<li>" + todo.task + "</li>")
                     }
-                // }
-            // )
+                }
+            )
 
 
 
