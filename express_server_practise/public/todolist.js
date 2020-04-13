@@ -12,7 +12,6 @@ $(
                 '/todos/',
                 {task:newtodo},
                 function(data){
-                    console.log(data)
                     todolist.empty()
                     for(todo of data){
                         todolist.append("<li>" + todo.task + "</li>")
