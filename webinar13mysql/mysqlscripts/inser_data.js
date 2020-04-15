@@ -2,7 +2,7 @@ const mysql = require('mysql2')
 
 const insert = {
     name: process.argv[2],
-    age: process.argv[3],
+    age: parseInt(process.argv[3]),
     city: process.argv[4]
 
 }
@@ -17,9 +17,9 @@ const connection = mysql.createConnection({
 
 connection.query(
     `INSERT INTO pearsons( name , age , city ) VALUES (
-      '$(insert.name)',
-      $(insert.age),
-      '$(insert.city)'
+      '${insert.name}',
+      ${insert.age},
+      '${insert.city}'
 )`,
     function (err, results) {
         if (err) {
