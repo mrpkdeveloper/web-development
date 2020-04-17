@@ -12,18 +12,16 @@ app.get('/', (req, res) => {
     db.getallperson()
         .then((persons) => {
 
-            res.render('persons', {persons})                                        // this line render persons.hbs file with following fake 
+            res.render('persons', { persons })   // this line render persons.hbs file with following fake 
 
         })
 
         .catch((err) => {
-          res.send(err)
+            res.send(err)
         })
-
-
-
-
 })
+
+
 
 app.get('/add', (req, res) => {
     res.render('persons_add')
@@ -31,6 +29,14 @@ app.get('/add', (req, res) => {
 
 
 app.post('/add', (req, res) => {
+
+    db.addpersons(req.body.name, req.body.age, req.body.city)
+        .then(() => {
+            res.redirect('/')
+        })
+        .catch((err) => {
+            res.send(err)
+        })
 
 })
 app.listen(4231)
