@@ -25,8 +25,8 @@ function getallperson() {
 function addpersons(name, age, city) {
     return new Promise(function (resolve, reject) {
         connection.query(
-            `INSERT INTO pearsons (name,age,city) VALUES(?,?,?)`,
-            [name, age, city],
+            `INSERT INTO pearsons( name , age , city ) VALUES (?,?,?)`,
+                [name,age,city],
             function (err, results) {
 
                 if (err) {
