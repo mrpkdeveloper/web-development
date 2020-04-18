@@ -32,3 +32,4 @@ connection.query(
     }
 
 )
+console.log(typeof(insert.name))

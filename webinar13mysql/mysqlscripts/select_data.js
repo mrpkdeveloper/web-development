@@ -8,6 +8,7 @@ const connection = mysql.createConnection({
 
 })
 
+
 connection.query(
     `SELECT * FROM pearsons`,
     function (err, rows,cols) {

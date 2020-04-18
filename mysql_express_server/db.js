@@ -22,11 +22,29 @@ function getallperson() {
     })
 }
 
+function getselectedperson(Namee) {
+    return new Promise(function (resolve, reject) {
+        connection.query(
+            `SELECT * FROM pearsons WHERE name = '${Namee}'`,                        //name of the table is pearsons
+            function (err, rows, cols) {
+                if (err) {
+                    reject(err)
+                } else {
+                    resolve(rows)
+                }
+            }
+        )
+    })
+}
+
 function addpersons(name, age, city) {
     return new Promise(function (resolve, reject) {
         connection.query(
-            `INSERT INTO pearsons( name , age , city ) VALUES (?,?,?)`,
-                [name,age,city],
+            `INSERT INTO pearsons( name , age , city ) VALUES (
+                '${name}',
+                ${age},
+                '${city}'
+          )`,
             function (err, results) {
 
                 if (err) {
@@ -42,6 +60,7 @@ function addpersons(name, age, city) {
 
 exports = module.exports = {
     getallperson,
-    addpersons
+    addpersons,
+    getselectedperson
 }
 

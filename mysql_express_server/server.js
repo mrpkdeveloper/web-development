@@ -26,10 +26,11 @@ app.get('/', (req, res) => {
 app.get('/add', (req, res) => {
     res.render('persons_add')
 })
-
+app.get('/show', (req, res) => {
+    res.render('persons_show')
+})
 
 app.post('/add', (req, res) => {
-
     db.addpersons(req.body.name, req.body.age, req.body.city)
         .then(() => {
             res.redirect('/')
@@ -39,4 +40,16 @@ app.post('/add', (req, res) => {
         })
 
 })
+
+app.post('/show', (req, res) => {
+    db.get(req.body.name)
+        .then(() => {
+            res.redirect('/')
+        })
+        .catch((err) => {
+            res.send(err)
+        })
+
+})
+
 app.listen(4231)
