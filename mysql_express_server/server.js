@@ -8,6 +8,6 @@ app.set('view engine', 'hbs')
 app.set('views', __dirname + "/views")
 app.use('/pages',require('./routes/pages').route)
 app.use('/api',require('./routes/api').route)
-app.use('/',path.join(__dirname,"public_static"))
+app.use('/',express.static(path.join(__dirname,"public_static")))
 
 app.listen(4231)
