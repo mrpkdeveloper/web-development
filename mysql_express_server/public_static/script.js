@@ -29,16 +29,17 @@ $(
         $.get('/api/persons',function(data){
            refreshtable(data)
         })
-
+        
         btn_submit.click(function () {
+            console.log("button pressed")
             $.post('/api/persons',
             {
-                name = input_name.val(),
-                age = input_age.val(),
-                city = input_city.val(),
+                name: input_name.val(),
+                age: input_age.val(),
+                city: input_city.val()
 
-            }
-            ,function(data){
+            },
+            function(data){
                refreshtable(data)
             })
         })
