@@ -13,9 +13,17 @@ route.get('/persons', function (req, res) {
 route.post('/persons', function (req, res) {
     //add the new persons   
     db.addpersons(req.body.name, req.body.age, req.body.city)
-        .then(() => res.redirect('/api/persons')) 
+        .then(() => res.redirect('/api/persons'))
         .catch((err) => res.send({ error: err }))
 })
+route.post('/delete', function (req, res) {
+    //to delete entry 
+    db.deleteperson(req.body.delete_age)          //here parameter passed is is the name tag in html file
+        .then(() => res.redirect('/api/persons'))
+        .catch((err) => res.send({ error: err }))
+})
+
+
 
 exports = module.exports = {
     route

@@ -5,6 +5,8 @@ $(
         let input_city = $('#city')
         let btn_submit = $('#submit')
         let table = $('#persons')
+        let btn_delete = $('#delete')
+        let delete_age = $('#delete_age')
 
         function refreshtable(persons) {   //persons is just a name of variable that needs to be passed 
             table.empty()
@@ -26,21 +28,35 @@ $(
             }
         }
 
-        $.get('/api/persons',function(data){
-           refreshtable(data)                    //here we pass data ie. table to refreshtablefunction
+        $.get('/api/persons', function (data) {
+            refreshtable(data)                    //here we pass data ie. table to refreshtablefunction
         })
-        
+
         btn_submit.click(function () {
             $.post('/api/persons',
-            {
-                name: input_name.val(),
-                age: input_age.val(),
-                city: input_city.val()
+                {
+                    name: input_name.val(),
+                    age: input_age.val(),
+                    city: input_city.val()
 
-            },
-            function(data){
-               refreshtable(data)
-            })
+                },
+                function (data) {
+                    refreshtable(data)
+                })
         })
+
+        btn_delete.click(function () {
+            $.post('/api/delete',
+                {
+                    delete_age: delete_age.val()
+                },
+                function (data) {
+                    refreshtable(data)
+                }
+            )
+        })
+
+
+
     }
 )

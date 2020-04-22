@@ -57,10 +57,27 @@ function addpersons(name, age, city) {
     })
 }
 
+function deleteperson(age){
+    return new Promise(function(resolve,reject){
+        connection.query(
+            `DELETE FROM pearsons WHERE age = '${age}'`,
+            function (err, results) {
+
+                if (err) {
+                    reject(err)
+                } else {
+                    resolve()
+                }
+            }
+        )
+    })
+
+}
 
 exports = module.exports = {
     getallperson,
     addpersons,
-    getselectedperson
+    getselectedperson,
+    deleteperson
 }
 
