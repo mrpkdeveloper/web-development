@@ -16,7 +16,7 @@ function getallperson() {
                     reject(err)
                 } else {
                     resolve(rows)
-                }
+                }  
             }
         )
     })

@@ -3,22 +3,20 @@ const route = require('express').Router()
 
 const db = require('../db')
 
-route.get('/persons',function(req,res){
+route.get('/persons', function (req, res) {
     //send all the persons as an array here
     db.getallperson()
-    .then((persons)=>res.send(persons))
-    .catch((err)=>res.send({error: err}))
+        .then((persons) => res.send(persons))
+        .catch((err) => res.send({ error: err }))
 
 })
-route.post('/persons',function(req,res){
-   //add the new persons   
-   db.addpersons(req.body.name,req.body.age,req.body.city)
-   .then(()=>res.redirect('/api/persons'))
-   .catch((err)=>res.send({error: err}))
- 
-
+route.post('/persons', function (req, res) {
+    //add the new persons   
+    db.addpersons(req.body.name, req.body.age, req.body.city)
+        .then(() => res.redirect('/api/persons')) 
+        .catch((err) => res.send({ error: err }))
 })
 
-exports = module.exports={
+exports = module.exports = {
     route
 }

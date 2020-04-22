@@ -6,7 +6,7 @@ $(
         let btn_submit = $('#submit')
         let table = $('#persons')
 
-        function refreshtable(persons) {
+        function refreshtable(persons) {   //persons is just a name of variable that needs to be passed 
             table.empty()
             table.append(
                 `<tr>
@@ -27,11 +27,10 @@ $(
         }
 
         $.get('/api/persons',function(data){
-           refreshtable(data)
+           refreshtable(data)                    //here we pass data ie. table to refreshtablefunction
         })
         
         btn_submit.click(function () {
-            console.log("button pressed")
             $.post('/api/persons',
             {
                 name: input_name.val(),

@@ -47,6 +47,6 @@ route.post('/show', (req, res) => {
 
 })
 
-exports = module.exports={
-route
+exports = module.exports = {
+    route
 }
