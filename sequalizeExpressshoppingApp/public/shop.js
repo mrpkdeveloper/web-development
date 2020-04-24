@@ -4,6 +4,16 @@ function fetchproducts(done) {
     })
 }
 
+function addproducts(name, manu, price, done) {
+    $.post('/api/products', {
+        name: name,
+        manufacturer: manu,
+        price: price
+    }, function (data) {
+        done(data)
+    })
+
+}
 
 function createproductcard(product) {
     return $(`
@@ -20,15 +30,4 @@ function createproductcard(product) {
 }
 
 
-$(function () {
-    let productlist = $('#productlist')
-    
-    fetchproducts(function (products) {
-        productlist.empty()
-        for (product of products) {
-            productlist.append(createproductcard(product))
-        }
-    })
-}
-)
-//executes when page is fully loaded
+

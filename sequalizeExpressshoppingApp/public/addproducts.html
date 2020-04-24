@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,11 +14,28 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-        <script src="shop.js"></script>
-        <script src="index.js"></script>
+    <script src="shop.js"></script>
+    <script src="addproducts.js"></script>
 </head>
 </head>
+
 <body>
-    
+    <div class="heading p-4 text-center">     <!-- these class are defined in bootstrap  -->
+        <h2>Add Product</h2>
+    </div>                                     
+    <div class="container form-group">
+        <label for="Productname">Product name</label>
+        <input type="text" class="form-control" id="Productname" placeholder="Enter Product name">
+        
+        <label for="Manufacturer">Manufacturer</label>
+        <input type="text" class="form-control" id="Manufacturer" placeholder="Enter Manufacturer name">
+        
+        <label for="Price">Price</label>
+        <input type="number" class="form-control" id="Price">
+
+        <button type="submit" class="btn btn-primary m-3" id="submit">Submit</button>
+
+    </div>
 </body>
+
 </html>

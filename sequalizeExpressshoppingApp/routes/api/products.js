@@ -1,8 +1,6 @@
 const product = require('../../db').products
 const route = require('express').Router()
 
-
-
 route.get('/', (req, res) => {
     //get all products
     product.findAll()
