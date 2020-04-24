@@ -1,5 +1,4 @@
-$(
-    function(){
+$(function(){
        
      let product_name = $('#Productname')
      let manufacturer = $('#Manufacturer')

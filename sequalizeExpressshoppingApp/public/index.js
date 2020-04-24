@@ -1,6 +1,5 @@
 $(function () {
     let productlist = $('#productlist')
-
     fetchproducts(function (products) {
         productlist.empty()
         for (product of products) {
