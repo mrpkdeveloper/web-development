@@ -17,12 +17,12 @@ function addproducts(name, manu, price, done) {
 
 function createproductcard(product) {
     return $(`
-    <div class=" card col-sm " style="width: 18rem;">
+    <div class=" card col-4 " style="width: 18rem;">
         <div class="card-body">
             <h4 class="card-title">${product.name}</h5>
             <h6 class="card-title">${product.manufacturer}</h4>
             <h6 class="card-title">${product.price}</h4>
-            <a href="#" class="btn btn-primary" id="${product.id}">Buy</a>
+            <button type="submit" class="btn btn-primary m-3" id="button-${product.id}">Buy</button>
         </div>
     </div>`)
     

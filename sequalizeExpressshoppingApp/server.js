@@ -9,4 +9,3 @@ app.use(express.urlencoded({extended:true}))
 app.use('/', express.static(path.join(__dirname, 'public')))  //this file executes index.html in public folder
 app.use('/api', require('./routes/api').route)  //this line execute index.js in api folder
 app.listen(1111, () => { console.log('server started at http://localhost:1111') })
- 
