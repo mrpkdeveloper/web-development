@@ -1,39 +1,32 @@
-const sequelize = require('sequelize')
+const Sequelize = require('sequelize')
 
-const db = new sequelize('gymuser','gymmer','gympass',{
-    host:'localhost',
-    dialect:'mysql'
+const db = new Sequelize('gymuser', 'gymmer', 'gympass', {
+    host: 'localhost',
+    dialect: 'mysql',
+    pool: {
+        min: 0,
+        max: 5
+    }
 })
-            //this is name of table
-const user = db.define('user',{
-    id:{
-        type:sequelize.INTEGER,
-        autoIncrement : true,
-        primaryKey:true
+//this is name of table
+const userdata = db.define('userdata', {
+    id: {
+        type: Sequelize.INTEGER,
+        autoIncrement: true,
+        primaryKey: true
     },
-    name:{
-        type:sequelize.STRING,
-        allownull:false
-    },
-    age:{
-        type:sequelize.NUMBER,
-        allownull:false
-    },
-    gender:{
-        type:sequelize.STRING,
-        allownull:false
-    },
-    phone:{
-        type:sequelize.NUMBER,
-        allownull:false
-    },
-    mail:{
-        type:sequelize.STRING,
-        allownull:false
-    },
+    name: Sequelize.STRING,
+
+    age: Sequelize.NUMBER
 
 })
 
-exports = module.exports={
-    user
+//these lines ensure that tables are created in your database
+db.sync()
+    .then(() => console.log('database synced successfully'))
+    .catch((err) => console.error("error in creating database"))
+
+exports = module.exports = {
+    userdata
 }
+
