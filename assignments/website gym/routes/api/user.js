@@ -1,39 +1,35 @@
-const user = require('../../db').userdata  //acquired user class from db.js
+const user = require('../../db').userdata
 const route = require('express').Router()
 
 route.get('/', (req, res) => {
-    //display all user info
+    //get all products
     user.findAll()
-        .then((user) => {
-            res.status(200).send(user)
+        .then((users) => {
+            res.status(200).send(users)
         })
         .catch((err) => {
-            res.status(500).send({ error: "could not retrieve user" })
+            res.status(500).send({ error: "could not find users" })
         })
 })
-
 route.post('/', (req, res) => {
-    //add new user
+    //add new products
+
+    if (isNaN((req.body.age))) {
+        return res.status(403).send({
+            error: "age is not a valid number"
+        })
+    }
     user.create({
-        
         name: req.body.name,
-        age:parseInt(req.body.age),
+        age: parseInt(req.body.age),
         gender: req.body.gender,
-        phone:parseInt( req.body.phone),
-        mail: req.body.mail
-
     })
-    .then((user) => {
-        res.status(201).send(user)
-    })
-    .catch((err) => {
-        res.status(501).send({ error: "could not add new user" })
-    })
-
-
+        .then((user) => {
+            res.status(201).send(user)
+        })
+        .catch((err) => {
+            res.status(501).send({ error: "could not add new users" })
+        })
 })
-
-
-
 
 exports = module.exports = route

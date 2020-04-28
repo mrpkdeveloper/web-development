@@ -1,32 +1,29 @@
-const Sequelize = require('sequelize')
+const sequelize = require('sequelize')
 
-const db = new Sequelize('gymuser', 'gymmer', 'gympass', {
+const db = new sequelize('gymuser', 'gymmer', 'gympass', {      //database  username password
     host: 'localhost',
-    dialect: 'mysql',
+    dialect: 'mysql',                                            //which dbms using 
     pool: {
         min: 0,
         max: 5
     }
 })
-//this is name of table
-const userdata = db.define('userdata', {
+
+const userdata = db.define('userdata', {              //table name products with following attributes
     id: {
-        type: Sequelize.INTEGER,
+        type: sequelize.INTEGER,
         autoIncrement: true,
         primaryKey: true
     },
-    name: Sequelize.STRING,
-
-    age: Sequelize.NUMBER
+    name: sequelize.STRING,
+    age: sequelize.INTEGER,
+    gender : sequelize.STRING
 
 })
 
-//these lines ensure that tables are created in your database
 db.sync()
     .then(() => console.log('database synced successfully'))
     .catch((err) => console.error("error in creating database"))
-
 exports = module.exports = {
     userdata
 }
-
