@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best gym</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script src="user.js"></script>
+    <script src="adduser.js"></script>
+    
 </head>
-
-
 
 <div class="header">
     <div class="items" id="left">
-        <img src="../images/logo.jpg" alt="logo">
+        <img src="logo.jpg" alt="logo">
         best gym
     </div>
 
@@ -32,7 +34,7 @@
     </div>
 </div>
 
-<form class="form" action="noaction.php">
+<form class="form" id="form" action="#"> 
 
 
     <h2>Fill up your details</h2>
@@ -40,9 +42,6 @@
     <input type="number" class="input" placeholder="enter your age" id="age">
     <input type="text" class="input" placeholder="enter your gender" id="gender">
     <button id="submit">submit</button>
-
-
-
 
 </form>
 

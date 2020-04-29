@@ -3,7 +3,7 @@ function fetchproducts(done) {
         done(data)
     })
 }
-
+ 
 function addproducts(name, manu, price, done) {
     $.post('/api/products', {
         name: name,
