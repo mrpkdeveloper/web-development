@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>socket.io</title>
-    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"
+        integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script> <!-- client side library for io   -->
+    <script src="script.js"></script> <!-- order of js file matters  -->
 </head>
+
 <body>
     <h2>socket.io example</h2>
+    <br><br>
+
+    <input type="text" id="input">
+    <button id="submit">submit</button>
+    <ul id="msglist"></ul>
 </body>
+
 </html>
