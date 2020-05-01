@@ -13,13 +13,13 @@ $(
 
         submit.click(function () {
 
-            socket.emit('send_msg ', { msg: input.val() })
+            socket.emit('send_msg', { msg: input.val() })
 
         })
 
-        socket.on('recv_msg', function (data) {
-            msglist.append($('<li>' + data.msg + '</li>'))
-        })
+        // socket.on('recv_msg', function (data) {
+        //     msglist.append($('<li>' + data.msg + '</li>'))
+        // })
 
     }
 )

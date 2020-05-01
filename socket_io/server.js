@@ -15,8 +15,8 @@ app.use('/', express.static(path.join(__dirname, 'public')))
 io.on('connection', (socket) => {
     console.log("new socket formed at " + socket.id)
     socket.emit('connected')
-    socket.on('send_msg' , (data)=>{
-        io.emit('recv_msg ',data)       // send backs data to the client
+    socket.on('send_msg', (data) => {
+        console.log("recived msg  = " + data.msg)
     })
 })
 
