@@ -31,11 +31,16 @@ $(
             user = username.val()
             chatdiv.show()
             logindiv.hide()
+
+            //send server this message
+            socket.emit('username', {
+                user: user
+            })
         })
 
         //this will listen to server and add data to webpage
         socket.on('recv_msg', function (data) {
-            msglist.append($('<li>' + data.user + " : " + data.msg + '</li>'))
+            msglist.append($('<li>' + data.user + ": " + data.msg + '</li>'))
         })
 
     }
