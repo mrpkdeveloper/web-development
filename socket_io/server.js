@@ -17,7 +17,11 @@ io.on('connection', (socket) => {                     //this code will copy itse
     socket.emit('connected')
     socket.on('send_msg', (data) => {                    //this is listner on server(what client say to server) 
         console.log("recived msg  = " + data.msg)
-        io.emit('recv_msg', data)                   //this will send data back to all the client 
+        
+        //io.emit sends data back to everyone including sender
+        //socket.broadcast.emit send data to others not to the sender 
+        socket.broadcast.emit('recv_msg', data) 
+       // io.emit('recv_msg', data)                   //this will send data back to all the client 
     })
 })
 
