@@ -14,7 +14,11 @@ app.use(session({
 app.use(passport.initialize())
 app.use(passport.session())
 
+//to handle templates 
+//default view is html so set to hbs
 app.set('view engine', 'hbs')
+app.set('views', __dirname + "/views")
+
 app.use('/public', require('./routes/public'))
 app.use('/private', require('./routes/private'))
 app.use('/', require('./routes/route'))
