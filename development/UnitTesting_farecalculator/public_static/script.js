@@ -13,7 +13,7 @@ $(
                 km: kmbox.val(),
                 min: minbox.val()
             }, function (data) {
-                farediv.text(data.fare)
+                farediv.text('fare :' + data.fare)
             })
         })
 
@@ -22,11 +22,12 @@ $(
             $.get('/rate', function (data) {
                 let ratedata = `
                 fixed rate = rs ${data.fixed} for ${data.minkm} km
+                <br>
                 fare(distance) = rs ${data.perkm} / km
+                <br>
                 fare(minutes) = rs ${data.permin} / min (after first ${data.freemin} min)
-
                 `
-                ratediv.text(ratedata)
+                ratediv.html(ratedata)
             })
         })
 
