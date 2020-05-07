@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const path = require('path')
+const fareutil = require('./fareutils')
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
@@ -12,12 +13,18 @@ app.use('/', express.static(path.join(__dirname, 'public_static')))
 app.post('/calculator', (req, res) => {
     let km = parseFloat(req.body.km)
     let min = parseFloat(req.body.min)
-    let fare = 50
-    fare += (km > 5) ? ((km - 5) * 10) : 0
-    fare += (min > 15) ? ((min - 15) * 2) : 0
+
+    //calute fare 
+    let fare = fareutil.calcfare(km, min)
 
     //send in form of json object
     res.send({ fare: fare })
+})
+
+
+//to show rate chart
+app.get('/rate', (req, res) => {
+    res.send(fareutil.rate)
 })
 
 app.listen(1111, () => { console.log("server open at http://localhost:1111") })
