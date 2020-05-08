@@ -13,4 +13,9 @@ describe('fareutils', function () {
         let fare = fareutil.calcfare(10, 0)
         except(fare).to.equal(100)
     })
+
+    it('except fare to be rs 56 for 2 km, 18min', () => {
+        let fare = fareutil.calcfare(2, 18)
+        except(fare).to.equal(56)
+    })
 })

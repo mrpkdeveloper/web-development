@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "cover": "nyc --reporter=html --reporter=text mocha"
+    "cover": "nyc --reporter=lcovonly --reporter=html mocha"
   },
   "author": "",
   "license": "ISC",
