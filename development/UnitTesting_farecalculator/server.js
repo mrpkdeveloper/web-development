@@ -27,4 +27,4 @@ app.get('/rate', (req, res) => {
     res.send(fareutil.rate)
 })
 
-app.listen(1111, () => { console.log("server open at http://localhost:1111") })
+exports = module.exports = app
