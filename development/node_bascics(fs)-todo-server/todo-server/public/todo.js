@@ -1,6 +1,7 @@
 let todos = [
     'first task',
-    'second task'
+    'second task',
+    'third task'
 ]
 function pushitem(item) {
     todos.push(item)
@@ -9,8 +10,4 @@ function pushitem(item) {
 function createlistitem(task) {
     return $(`<li>${task}</li>`)
 
-}
-
-exports = module.exports = {
-    pushitem
 }

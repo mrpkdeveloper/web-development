@@ -1,16 +1,18 @@
 const express = require('express')
 const app = express()
-const pushitem = require('./todo').pushitem
+const path = require('path')
 
 
-app.get('/', (req, res) => {
-    res.sendfile(__dirname + '/index.html')
+app.use('/', express.static(path.join(__dirname, 'public')))
 
-})
+// app.get('/', (req, res) => {
+//     res.sendfile(__dirname + '/index.html')
+
+// })
 
 app.get('/add', (req, res) => {
     console.log(req.query)
-    pushitem(req.query.task)
     res.redirect('/')
 })
+
 app.listen(4444)
