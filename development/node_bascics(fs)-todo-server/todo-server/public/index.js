@@ -5,7 +5,6 @@ $(function () {
 
     submit.click(function () {
         pushitem(input.val())
-        console.log(input.val())
         itemlist.empty()
         // console.log(todos[1])
         // itemlist.append(createlistitem(input.val()))
