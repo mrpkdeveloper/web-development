@@ -8,12 +8,18 @@
 </head>
 
 <body>
+    <!-- iframes are costly as iframes reduce performance since iframe is basically openning a new tab and loading html in same tab thus we only use it to embed vedios or other website stuff  -->
     <h1>iframes tutorial</h1>
+    <h3>open in frames</h3>
+    <ul>
+        <li><a href="http://example.com/" target="frame1">example.com</a></li>
+        <li><a href="./navigation bar.html" target="frame2">navigation bar</a></li>
+    </ul>
     <!-- iframes are used to add some other page or content like youtube vedios or other website content -->
-    <iframe src="./madmathsform.html" frameborder="0" height="900" width="600"></iframe>
-    <iframe src="https://www.youtube.com/watch?v=1H81005Ll14&list=PLeLb_6es3GHrqs49rnyPg6VAYdgbMMFDa&index=24&t=0s"
-        frameborder="0" height="900" width="600"></iframe>
-
+    <iframe name="frame1" src="./madmathsform.html" frameborder="1" height="900" width="550"></iframe>
+    <iframe name="frame2" src="./tables.html" frameborder="1" height="900" width="650"></iframe>
+    <h3>this page inside iframe </h3>
+    <iframe name="frame2" src="./iframes.html" frameborder="1" height="900" width="650"></iframe>
 
 </body>
 
