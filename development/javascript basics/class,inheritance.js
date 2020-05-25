@@ -48,3 +48,22 @@ let fruitclass2 = class {
     }
 }
 
+
+
+//inheritance
+let obj1 = {
+    a: 10,
+    b: 20,
+    c: 30
+}
+
+let obj2 = object.create(obj1)
+//this above line will basically inheit properties of obj1 to obj2
+//obj2 has proto field which points to obj1
+/*
+  obj2.a -> it will try to find a in obj2,
+         ->if not found ,
+         ->it will try to find in obj2._proto_
+         ->if not found , then in obj2._proto_._proto_
+         ->and so on till obj2._proto_ becomes null
+*/
