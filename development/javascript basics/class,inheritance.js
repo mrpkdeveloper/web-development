@@ -57,7 +57,7 @@ let obj1 = {
     c: 30
 }
 
-let obj2 = object.create(obj1)
+let obj2 = Object.create(obj1)
 //this above line will basically inheit properties of obj1 to obj2
 //obj2 has proto field which points to obj1
 /*
