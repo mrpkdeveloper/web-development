@@ -52,3 +52,5 @@ str.charAt = function () { return "x" } //does not make any changes as str does 
 str.__proto__.charAt = function () {
     return "x"
 }
+
+//will continue in no time 
