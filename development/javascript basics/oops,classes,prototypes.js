@@ -54,12 +54,23 @@ str.__proto__.charAt = function () {
 }
 
 //**************************classes************************************
-
+console.log("***********classes************")
+//no type of class
+//here type of person will be function only 
 class person {
     constructor(name, age) {
         this.name = name
         this.age = age
     }
+    isadult() {                     //we do not write function keyword in class
+        return this.age > 18        //this function defines inside person.prototype
+    }
 }
 
-let p = new person("john", 20)
+//p is is an object of function person
+let p1 = new person("john", 20)
+let p2 = new person("john", 15)
+console.log(p1.__proto__ == person.prototype)  //trueF
+console.log(p1.__proto__.__proto__ == Object.prototype)  //true
+console.log(p1.isadult())//true
+console.log(p1.isadult == p2.isadult) //true as both refring to same place
