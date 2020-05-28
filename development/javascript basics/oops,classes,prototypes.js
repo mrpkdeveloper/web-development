@@ -53,4 +53,13 @@ str.__proto__.charAt = function () {
     return "x"
 }
 
-//will continue in no time 
+//**************************classes************************************
+
+class person {
+    constructor(name, age) {
+        this.name = name
+        this.age = age
+    }
+}
+
+let p = new person("john", 20)
