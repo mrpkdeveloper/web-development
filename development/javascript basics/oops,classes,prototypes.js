@@ -77,6 +77,7 @@ console.log(p1.isadult == p2.isadult) //true as both refring to same place
 
 
 //********inheritance*************************
+console.log("********inheritance*************************")
 class student extends person {
     constructor(name, age, std) {
         super(name, age)
@@ -86,3 +87,10 @@ class student extends person {
 
 let s1 = new student("jhonny", 20, 12)
 let s2 = new student("bonny", 20, 12)
+
+console.log(s1.__proto__ == student.prototype)//true
+console.log(s1.__proto__.__proto__ == person.prototype)//true
+console.log(s1.__proto__.__proto__.__proto__ == Object.prototype)//true
+
+//actually no relaton b/w student and person 
+//relation exist b/w student.prototype and person.prototype
