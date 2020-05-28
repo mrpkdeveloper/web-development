@@ -74,3 +74,15 @@ console.log(p1.__proto__ == person.prototype)  //trueF
 console.log(p1.__proto__.__proto__ == Object.prototype)  //true
 console.log(p1.isadult())//true
 console.log(p1.isadult == p2.isadult) //true as both refring to same place
+
+
+//********inheritance*************************
+class student extends person {
+    constructor(name, age, std) {
+        super(name, age)
+        this.std = std
+    }
+}
+
+let s1 = new student("jhonny", 20, 12)
+let s2 = new student("bonny", 20, 12)
