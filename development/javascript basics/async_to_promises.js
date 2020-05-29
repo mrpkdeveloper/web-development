@@ -36,7 +36,7 @@ function fakedownload(done) {
     setTimeout(() => {
         let downloaded_data = "downloaded data get from net"
         done(downloaded_data)
-    }, 3000);
+    }, .00000001);
 }
 
 //on calling this function first setimeout to 3000 milisecnds
@@ -44,7 +44,32 @@ function fakedownload(done) {
 fakedownload(function (data) {
     console.log("we downloaded a file which has this data =====> ")
     console.log(data)
+    console.log("/n")
 })
 
-//******set timeout function***************
+
+//*****promises***************
 console.log("******promises***************")
+
+function fakedownloadpromise(condition) {
+    return new Promise(function (resolve, reject) {
+        setTimeout(() => {
+            let downloaded_file = "this is downloaded file"
+            if (condition) {
+                resolve(downloaded_file)
+            } else {
+                reject(new Error("could not download file"))
+            }
+        }, 5000);
+
+    })
+}
+
+fakedownloadpromise(true)
+    .then(function (data) {
+        console.log(" downloaded file ==> ")
+        console.log(data)
+    })
+    .catch(function (err) {
+        console.log(err)
+    })
