@@ -2,7 +2,7 @@
 This repo is for learning web development . This is just for practise purpose. Various technologies have been used in this development like 
 html,css,javascript,nodejs,express,sequelize,mysql,passport and lots more.
 ### These are some websites layout (made just for practise purpose)
-1.[code like a boss](http://127.0.0.1:5500/assignments%20and%20practise/practise/website%20css%20practise.html)
+1.[code like a boss](https://mrpkdeveloper.github.io/Code-Like-A-Boss/public_static/)
 <br>
 2.[my online meals](http://127.0.0.1:5500/assignments%20and%20practise/practise/fully%20responsive%20website/index.html)
 <br>
