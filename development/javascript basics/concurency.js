@@ -16,3 +16,4 @@ hellosayer(3, "prateek")
 hellosayer(2, "arnav")
 //so basically when prateek prints it waits for 1
 // sec and in that time other call runs and print arnav
+//these two calls are not running parallely
