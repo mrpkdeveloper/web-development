@@ -30,7 +30,7 @@ function hellosayer2(times, name) {
             console.log("hello " + name)
             if (count == times) {
                 clearInterval(loopid)
-                resolve()
+                resolve() // resolve function call function inside .then
             }
 
 
@@ -41,11 +41,11 @@ function hellosayer2(times, name) {
 }
 
 //concurently
-// hellosayer2(2, "arnav")
-// .then(hellosayer2(2, "prateek"))
-// .then(hellosayer2(2, "varun"))
+hellosayer2(2, "arnav")
+    .then(hellosayer2(2, "prateek"))
+    .then(hellosayer2(2, "varun"))
 
 //sequentially
-hellosayer2(2, "arnav")
-    .then(() => hellosayer2(2, "prateek"))
-    .then(() => hellosayer2(2, "varun"))
+// hellosayer2(2, "arnav")
+    // .then(() => hellosayer2(2, "prateek"))
+    // .then(() => hellosayer2(2, "varun"))
