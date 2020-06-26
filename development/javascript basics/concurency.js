@@ -53,9 +53,10 @@ function hellosayer2(times, name) {
 
 // async await
 
-//this function executes asynchronously
+//this function executes asynchronously 
+//we can use await only under async function
 async function task() {
-    await hellosayer2(3, "arnav")
+    await hellosayer2(3, "arnav")   //we can await promise objects
     await hellosayer2(3, "prateek")
     await hellosayer2(3, "varun")
 }
