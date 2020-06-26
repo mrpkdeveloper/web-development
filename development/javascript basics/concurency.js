@@ -41,11 +41,24 @@ function hellosayer2(times, name) {
 }
 
 //concurently
-hellosayer2(2, "arnav")
-    .then(hellosayer2(2, "prateek"))
-    .then(hellosayer2(2, "varun"))
+// hellosayer2(2, "arnav")
+// .then(hellosayer2(2, "prateek"))
+// .then(hellosayer2(2, "varun"))
 
 //sequentially
 // hellosayer2(2, "arnav")
-    // .then(() => hellosayer2(2, "prateek"))
-    // .then(() => hellosayer2(2, "varun"))
+// .then(() => hellosayer2(2, "prateek"))
+// .then(() => hellosayer2(2, "varun"))
+
+
+// async await
+
+//this function executes asynchronously
+async function task() {
+    await hellosayer2(3, "arnav")
+    await hellosayer2(3, "prateek")
+    await hellosayer2(3, "varun")
+}
+
+task()
+hellosayer2(3, "aman") //runs parallely with task()
