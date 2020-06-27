@@ -24,14 +24,13 @@ readdata()
             }
             dict[a[j]] = c
         }
-
-        console.log(dict)
+        let finalstring = JSON.stringify(dict)
+        console.log(finalstring)
+        fs.writeFile(__dirname + "/finaltext.txt", finalstring, function (err) {
+            if (err) throw err
+            console.log("file was written")
+        })
     })
-
-
-
-
-
 
 
 // let a = "a,b,c"
