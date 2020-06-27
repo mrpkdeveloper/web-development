@@ -55,11 +55,35 @@ function hellosayer2(times, name) {
 
 //this function executes asynchronously 
 //we can use await only under async function
+// async function task() {
+// await hellosayer2(3, "arnav")   //we can await promise objects
+// await hellosayer2(3, "prateek")
+// await hellosayer2(3, "varun")
+// }
+
+// task()
+// hellosayer2(3, "aman") //runs parallely with task()
+
+
+//batch task promise.all 
+
 async function task() {
-    await hellosayer2(3, "arnav")   //we can await promise objects
-    await hellosayer2(3, "prateek")
-    await hellosayer2(3, "varun")
+
+    //both batch sequentially
+
+    await Promise.all([
+        hellosayer2(3, "arnav"),
+        hellosayer2(3, "prateek"),       //first this batch concurrently
+        hellosayer2(3, "varun")
+    ])
+    console.log(" ******** batch1 ended *************")
+    await Promise.all([
+        hellosayer2(3, "aman"),
+        hellosayer2(3, "tarun"),          //then this batch concurrently
+        hellosayer2(3, "shivam")
+    ])
+
+
 }
 
 task()
-hellosayer2(3, "aman") //runs parallely with task()
