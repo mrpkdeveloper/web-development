@@ -1,0 +1,6 @@
+"cat":4
+"monkey":3
+"dog":2
+"elephant":2
+"lion":2
+"rat":1

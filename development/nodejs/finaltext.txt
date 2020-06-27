@@ -1,1 +1,0 @@
-{"cat":4,"dog":2,"elephant":2,"lion":2,"rat":1}
