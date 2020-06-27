@@ -14,17 +14,18 @@ function readdata() {
 
 readdata()
     .then((a) => {
+        var dict = {}
         for (let j = 0; j < a.length; j++) {
-            var c = 0;
-            for (let i = j; i < a.length; i++) {
+            var c = 0
+            for (let i = 0; i < a.length; i++) {
                 if (a[j] == a[i]) {
                     c++
                 }
             }
-            console.log(a[j] + " count : " + c)
+            dict[a[j]] = c
         }
 
-
+        console.log(dict)
     })
 
 
