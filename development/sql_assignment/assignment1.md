@@ -15,7 +15,7 @@ SELECT StudentName , MAX(Marks) FROM student ;
 
 ## Answer3
 ```
-doubt
+SELECT Product.ProductCategory,SUM(Sales.SalesValue) FROM Product INNER JOIN Sales ON Product.Pid=Sales.Pid GROUP BY Product.ProductCategory;
 ```
 
 ## Answer4
