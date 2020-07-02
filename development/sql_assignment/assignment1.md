@@ -29,10 +29,36 @@ v.   SELECT StudentName FROM student GROUP BY StudentName;
 
 ## Answer5
 ```
-doubt
+A)
++----------+---------+
+| hostname | hostmac |
++----------+---------+
+| host 1   | mac 1   |
+| host 3   | mac 31  |
+| host 3   | mac 32  |
+| host 2   | NULL    |
+| NULL     | mac 4   |
++----------+---------+
+B)
++----------+---------+
+| hostname | hostmac |
++----------+---------+
+| host 1   | mac 1   |
+| host 3   | mac 31  |
+| host 3   | mac 32  |
++----------+---------+
+C)
++----------+---------+
+| hostname | hostmac |
++----------+---------+
+| host 2   | mac 1   |
+| host 3   | mac 1   |
++----------+---------+
+
 ```
 
 ## Answer6
 ```
-doubt
+1)  SELECT product.productname FROM product , sales WHERE sales.salesvalue=0 AND product.pid=sales.pid AND salesdate LIKE'%JULY%';
+2) SELECT product.productname , sales.salesdate,sales.salesvalue FROM product LEFT JOIN  sales ON product.pid=sales.pid HAVING sales.salesvalue=0 AND sales.salesdate LIKE '%july%';
 ```
