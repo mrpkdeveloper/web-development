@@ -10,13 +10,15 @@
 
 <body>
     <h1>Enco - Deco Message</h1>
-    <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+    <textarea name="msg" id="msg" cols="30" rows="10"></textarea><br>
     <button id="encode">Encode</button>
-    <form>
-        <input id="disp" type="text" disabled>
-        <button>Encrypt</button>
-        <button>submit</button>
 
+    <form action="/msg" method="GET">
+        <input id="disp" type="text">
+        <br>
+        <button>Encrypt</button>
+        <br>
+        <button type="submit">submit</button>
     </form>
 </body>
 
